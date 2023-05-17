@@ -36,7 +36,11 @@ namespace XF2_443_SQLDB1
                 return db.InsertAsync(user);
             }
         }
-       
+        // Delete User.
+        public Task<int> DeleteUserAsync(Users user)
+        {
+            return db.DeleteAsync(user);
+        }
 
 
 

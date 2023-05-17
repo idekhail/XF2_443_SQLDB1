@@ -2,11 +2,23 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XF2_443_SQLDB1.UpdatePage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Second Page" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <StackLayout BackgroundColor="AntiqueWhite" Margin="15" Padding="10" Spacing="10">
+            <Label Text="UId" x:Name="UId" BackgroundColor="Black" TextColor="White" HeightRequest="60" FontSize="20" FontAttributes="Bold"/>
+            <Entry Placeholder="Username" x:Name="Username" BackgroundColor="Black" TextColor="White" HeightRequest="60" FontSize="20" FontAttributes="Bold"/>
+            <Entry Placeholder="Passworsd" x:Name="Password" BackgroundColor="Black" TextColor="White" HeightRequest="60" FontSize="20" FontAttributes="Bold"/>
+            
         </StackLayout>
-    </ContentPage.Content>
+        <StackLayout BackgroundColor="LightBlue" Margin="15">
+            <StackLayout BackgroundColor="AntiqueWhite" Margin="15" Padding="10" Spacing="10" Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="Update" x:Name="Update" Clicked="Update_Clicked"  TextColor="White" BackgroundColor="Brown" HorizontalOptions="Center" WidthRequest="120" FontSize="20" FontAttributes="Bold" />
+                <Button Text="Delete" x:Name="Delete" Clicked="Delete_Clicked"  TextColor="White" BackgroundColor="Brown" HorizontalOptions="Center" WidthRequest="120" FontSize="20" FontAttributes="Bold" />
+                <Button Text="Cancel" x:Name="Cancel" TextColor="White" BackgroundColor="Brown" HorizontalOptions="Center" WidthRequest="120" FontSize="20" FontAttributes="Bold" />
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
 </ContentPage>
