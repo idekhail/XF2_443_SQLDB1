@@ -2,11 +2,23 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XF2_443_SQLDB1.ShowPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Show Page" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="Username" x:Name="Username" WidthRequest="120"
+                    FontSize="20" FontAttributes="Bold"/>
+        <StackLayout BackgroundColor="AntiqueWhite" Margin="15" Padding="10" Spacing="10">
+            
+            <Label Text="ShowMe" x:Name="ShowMe" BackgroundColor="Black" HeightRequest="200"
+                   TextColor="White" FontSize="20" FontAttributes="Bold"/>
         </StackLayout>
-    </ContentPage.Content>
+        <StackLayout BackgroundColor="AntiqueWhite" Margin="15" Padding="10" Spacing="10" 
+                        Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="Update" x:Name="Update" Clicked="Update_Clicked"  TextColor="White" WidthRequest="120"
+                    BackgroundColor="Brown" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold"/>
+            <Button Text="Logout" x:Name="Logout" TextColor="White" BackgroundColor="Brown" 
+                    HorizontalOptions="Center" WidthRequest="120" FontSize="20" FontAttributes="Bold" />
+        </StackLayout>
+    </StackLayout>
 </ContentPage>
