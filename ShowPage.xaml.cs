@@ -28,5 +28,11 @@ namespace XF2_443_SQLDB1
             Navigation.PushAsync(new UpdatePage(user));
             
         }
+
+        private async void AllUsers_Clicked(object sender, EventArgs e)
+        {
+            var details = await App.UserSQLite.GetAllUsersAsync();
+            myListView.ItemsSource = details;
+        }
     }
 }

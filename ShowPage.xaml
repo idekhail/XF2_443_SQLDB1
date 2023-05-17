@@ -10,14 +10,35 @@
                     FontSize="20" FontAttributes="Bold"/>
         <StackLayout BackgroundColor="AntiqueWhite" Margin="15" Padding="10" Spacing="10">
             
-            <Label Text="ShowMe" x:Name="ShowMe" BackgroundColor="Black" HeightRequest="200"
+            <Label Text="ShowMe" x:Name="ShowMe" BackgroundColor="Black" HeightRequest="60"
                    TextColor="White" FontSize="20" FontAttributes="Bold"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <ListView x:Name="myListView" HasUnevenRows="True" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Id}"/>
+                                <Label Text="{Binding Username}"/>
+                                <Label Text="{Binding Password}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
         <StackLayout BackgroundColor="AntiqueWhite" Margin="15" Padding="10" Spacing="10" 
                         Orientation="Horizontal" HorizontalOptions="Center">
             <Button Text="Update" x:Name="Update" Clicked="Update_Clicked"  TextColor="White" WidthRequest="120"
                     BackgroundColor="Brown" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold"/>
             <Button Text="Logout" x:Name="Logout" TextColor="White" BackgroundColor="Brown" 
+                    HorizontalOptions="Center" WidthRequest="120" FontSize="20" FontAttributes="Bold" />
+        </StackLayout>
+        <StackLayout BackgroundColor="AntiqueWhite" Margin="15" Padding="10" Spacing="10" 
+                        Orientation="Horizontal" HorizontalOptions="Center">
+
+            <Button Text="AllUsers" x:Name="AllUsers" Clicked="AllUsers_Clicked" TextColor="White" BackgroundColor="Brown" 
                     HorizontalOptions="Center" WidthRequest="120" FontSize="20" FontAttributes="Bold" />
         </StackLayout>
     </StackLayout>

@@ -41,7 +41,11 @@ namespace XF2_443_SQLDB1
         {
             return db.DeleteAsync(user);
         }
-
+        //Get all Users.
+        public Task<List<Users>> GetAllUsersAsync()
+        {
+            return db.Table<Users>().ToListAsync();
+        }
 
 
 
